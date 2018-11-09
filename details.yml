@@ -1,54 +1,47 @@
 ---
 # Personal details
-name: Friedrich Nietzsche
+name: Ethan Robison
 address:
-- Humboldtstraße 36
-- 99425 Weimar
-- Prussia
-phone: "+49 03643 545400"
-email: friedrich@thevoid.de
+- 3414 Mudd Library
+- Evanston, IL 60201
+phone: "(312) 502 9032"
+email: ethanrobison@u.northwestern.edu
 # Insert URLs without http://
 urls:
-- wki.pe/friedrich_nietzsche
-- twitter.com/tinynietzsche
+- ethanrobison.com
 
 # Sections
 
-intro: "I know my fate. One day my name will be associated with the memory of something tremendous --- a crisis without equal on earth, the most profound collision of conscience, a decision that was conjured up against everything that had been believed, demanded, hallowed so far. I am no man, I am dynamite."
-
-skills:
-- Aesthetics, Ethics, Metaphysics, Nihilism
-- Psychology, Ontology, Poetry, Value theory
-- Voluntarism, Tragedy, Fact–value distinction
-- Anti-foundationalism, Philosophy of history
+intro: "Graduate student studying experimental game AI."
 
 experience:
-- years: 1879--1889
-  employer: Freiberufler
-  job: Freier Philisoph
-  city: Sils-Maria
-- years: 1869–-1879
-  employer: Universität Basel
-  job: Professor für klassische Philologie
-  city: Basel
-- years: 1867--1868
-  employer: Preußischen Artillerie
-  job: Kanonier
-  city: Naumburg
+- years: Fall 2016--Present
+  employer: Northwestern University
+  job: Graduate Teaching Assistant
+  description: "Lecturer and teaching assistant for undergraduate and graduate level computer science courses. Highlights: _Data Structures and Data Management_, _Game Design and Development_, & _Introduction to Artificial Intelligence_."
+- years: Fall 2016--Summer 2017
+  employer: SomaSim, LLC.
+  job: Game Programmer (Contractor)
+  description: "UI programmer for mobile port of _Project Highrise_; programmer for desktop edition of same."
 
 education:
-- year: 1867
-  subject: Philology
-  institute: Leipzig Universität
-  city: Leipzig
-- year: 1864
-  subject: Abitur
-  institute: Schulpforta
-  city: Naumburg
+- year: Expected 2020
+  subject: Ph. D. in Artifical Intelligence
+  institute: Northwestern University
+  city: Evanston, IL
+- year: Graduated 2016
+  subject: B.S. in Computer Science
+  institute: Northwestern University
+  city: Evanston, IL
+
+skills:
+- C#, Python, git, C, C++
+- English, Spanish (professional fluency), French (conversational), Korean (conversational)
+- Unity3D
 
 # Settings
 mainfont: Hoefler Text
 fontsize: 10pt
-lang: English
+lang: en-US 
 geometry: a4paper, left=35mm, right=35mm, top=51mm, bottom=17mm
 ---

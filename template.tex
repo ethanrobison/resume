@@ -17,7 +17,7 @@
 \setlength{\columnsep}{-3.5cm}
 
 % Uncomment to suppress page numbers
-% \pagenumbering{gobble}
+\pagenumbering{gobble}
 
 % LANGUAGE
 %--------------------------------
@@ -60,8 +60,8 @@ $endif$
 \hypersetup
 {
   pdfauthor={$name$},
-  pdfsubject={$name$'s CV},
-  pdftitle={$name$'s CV},
+  pdfsubject={$name$ resumé},
+  pdftitle={$name$'s resumé},
   colorlinks, breaklinks, xetex, bookmarks,
   filecolor=black,
   urlcolor=[rgb]{0.117,0.682,0.858},
@@ -87,8 +87,6 @@ $endfor$
 \vspace{-10pt}
 
 $phone$\\
-\href{mailto:$email$}{$email$}\\
-
 
 $if(urls)$
 \columnbreak
@@ -96,6 +94,7 @@ $if(urls)$
 $for(urls)$
 \href{http://$urls$}{$urls$}\\
 $endfor$
+\href{mailto:$email$}{$email$}\\
 \end{multicols}
 $endif$
 
@@ -105,25 +104,16 @@ $if(intro)$
 $intro$
 $endif$
 
-\subsection*{Areas of Interest}
-$if(skills)$
-\begin{itemize}
-    $for(skills)$
-      \item $skills$
-    $endfor$
-\end{itemize}
-$endif$
-
 % \vfill
 
-\vspace{25pt}
+% \vspace{25pt}
 
-\section*{Previous Experience}
+\section*{Work}
 \noindent
 $for(experience)$
 \note{$experience.years$}\textsc{$experience.employer$}\\
 \emph{$experience.job$}\\
-$experience.city$\\[.2cm]
+$experience.description$\\[.2cm]
 $endfor$
 
 $if(education)$
@@ -135,10 +125,10 @@ $for(education)$
 $endfor$
 $endif$
 
-$if(languages)$
-\section*{Languages}
-$for(languages)$
-\emph{$languages.language$} ($languages.proficiency$)\\
+\section*{Skills}
+$if(skills)$
+$for(skills)$
+  $skills$\\[.2cm]
 $endfor$
 $endif$
 
