@@ -12,17 +12,36 @@ urls:
 
 # Sections
 
-intro: "Graduate student studying experimental game AI."
+intro: "Graduate student studying experimental game AI. Seeking software engineering intership."
 
 experience:
-- years: Fall 2016--Present
+- years: Fall 2018
   employer: Northwestern University
-  job: Graduate Teaching Assistant
-  description: "Lecturer and teaching assistant for undergraduate and graduate level computer science courses. Highlights: _Data Structures and Data Management_, _Game Design and Development_, & _Introduction to Artificial Intelligence_."
-- years: Fall 2016--Summer 2017
+  job: Graduate Teaching Assistant, Introduction to Artificial Intelligence
+  description: "Teaching assistant and team lead for upper-level course on artificial intelligence."
+- years: Spring 2018
+  employer: Northwestern University
+  job: Graduate Teaching Assistant, Data Structures and Data Management
+  description: "Lecturer and teaching assistant for course on fundamentals of data structures."
+- years: Spring 2018
+  employer: Northwestern University
+  job: Instructor, Game Design Studio II
+  description: "Organizer, instructor of upper-level course for industry-bound students. Taught in Unity3D."
+- years: 2016--2017
   employer: SomaSim, LLC.
   job: Game Programmer (Contractor)
   description: "UI programmer for mobile port of _Project Highrise_; programmer for desktop edition of same."
+
+involvement:
+- year: Summer 2018--Present
+  title: CS PhD Advisory Council
+  role: Board member
+  description: "Organize events for graduate student community building."
+- year: Spring 2018--Present
+  title: Plant it Purple! Graduate Gardens
+  role: Volunteer
+  description: "Landscape and maintain vegetable gardens around university campus."
+
 
 education:
 - year: Expected 2020
@@ -35,9 +54,10 @@ education:
   city: Evanston, IL
 
 skills:
-- C#, Python, git, C, C++
-- English, Spanish (professional fluency), French (conversational), Korean (conversational)
-- Unity3D
+  - title: Programming
+    description: C#, Python, git, C, C++, JavaScript
+  - title: Foreign Language
+    description: "English, Spanish (fluent), French (conversational), Korean (conversational)"
 
 # Settings
 mainfont: Hoefler Text

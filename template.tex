@@ -64,10 +64,8 @@ $endif$
   pdftitle={$name$'s resumé},
   colorlinks, breaklinks, xetex, bookmarks,
   filecolor=black,
-  urlcolor=[rgb]{0.117,0.682,0.858},
-  linkcolor=[rgb]{0.117,0.682,0.858},
-  linkcolor=[rgb]{0.117,0.682,0.858},
-  citecolor=[rgb]{0.117,0.682,0.858}
+  urlcolor=[rgb]{0,0,0},
+  linkcolor=[rgb]{0.117,0.682,0.858}
 }
 
 % DOCUMENT
@@ -98,7 +96,7 @@ $endfor$
 \end{multicols}
 $endif$
 
-\vspace{30pt}
+%\vspace{20pt}
 
 $if(intro)$
 $intro$
@@ -108,27 +106,34 @@ $endif$
 
 % \vspace{25pt}
 
-\section*{Work}
-\noindent
-$for(experience)$
-\note{$experience.years$}\textsc{$experience.employer$}\\
-\emph{$experience.job$}\\
-$experience.description$\\[.2cm]
-$endfor$
-
 $if(education)$
 \section*{Education}
 \noindent
 $for(education)$
-\note{$education.year$}\textbf{$education.subject$}$if(education.degree)$, $education.degree$$endif$\\
+\note{\rightline{$education.year$}}\textsc{$education.subject$}$if(education.degree)$, $education.degree$$endif$\\
 \emph{$education.institute$}$if(education.city)$, $education.city$$endif$\\[.2cm]
 $endfor$
 $endif$
 
+\section*{Work}
+\noindent
+$for(experience)$
+\note{\rightline{$experience.years$}}\textsc{$experience.job$}\\
+\emph{$experience.employer$}\\
+$experience.description$\\[.2cm]
+$endfor$
+
+\section*{Involvement}
+\noindent
+$for(involvement)$
+\note{\rightline{$involvement.year$}}\textsc{$involvement.title$}\\
+\emph{$involvement.role$}. $involvement.description$.\\[.2cm]
+$endfor$
+
 \section*{Skills}
 $if(skills)$
 $for(skills)$
-  $skills$\\[.2cm]
+  \emph{$skills.title$}: $skills.description$\\[.2cm]
 $endfor$
 $endif$
 
