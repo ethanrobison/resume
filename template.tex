@@ -1,7 +1,7 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 
-\documentclass[$fontsize$, a4paper]{article}
+\documentclass[$fontsize$, letter]{article}
 
 % LAYOUT
 %--------------------------------
@@ -60,12 +60,16 @@ $endif$
 \hypersetup
 {
   pdfauthor={$name$},
-  pdfsubject={$name$ resumé},
-  pdftitle={$name$'s resumé},
+  pdfsubject={$name$ Resumé},
+  pdftitle={$name$'s Resumé},
   colorlinks, breaklinks, xetex, bookmarks,
   filecolor=black,
   urlcolor=[rgb]{0,0,0},
   linkcolor=[rgb]{0.117,0.682,0.858}
+}
+
+\newcommand{\heading}[1]{
+    \hrulefill \vspace{-0.5cm} \subsection*{#1}
 }
 
 % DOCUMENT
@@ -75,11 +79,11 @@ $endif$
 {\LARGE $name$}\\[.2cm]
 
 $if(urls)$
-\begin{multicols}{2}
+    \begin{multicols}{2}
 $endif$
 
 $for(address)$
-$address$\\
+    $address$\\
 $endfor$
 
 \vspace{-10pt}
@@ -87,54 +91,50 @@ $endfor$
 $phone$\\
 
 $if(urls)$
-\columnbreak
-
-$for(urls)$
-\href{http://$urls$}{$urls$}\\
-$endfor$
-\href{mailto:$email$}{$email$}\\
-\end{multicols}
+    \columnbreak
+        $for(urls)$
+        \href{http://$urls$}{$urls$}\\
+        $endfor$
+    \href{mailto:$email$}{$email$}\\
+    \end{multicols}
 $endif$
 
-%\vspace{20pt}
-
-$if(intro)$
-$intro$
-$endif$
-
-% \vfill
-
-% \vspace{25pt}
-
-$if(education)$
-\section*{Education}
-\noindent
+\heading{Education}
 $for(education)$
-\note{\rightline{$education.year$}}\textsc{$education.subject$}$if(education.degree)$, $education.degree$$endif$\\
-\emph{$education.institute$}$if(education.city)$, $education.city$$endif$\\[.2cm]
-$endfor$
-$endif$
-
-\section*{Work}
-\noindent
-$for(experience)$
-\note{\rightline{$experience.years$}}\textsc{$experience.job$}\\
-\emph{$experience.employer$}\\
-$experience.description$\\[.2cm]
-$endfor$
-
-\section*{Involvement}
-\noindent
-$for(involvement)$
-\note{\rightline{$involvement.year$}}\textsc{$involvement.title$}\\
-\emph{$involvement.role$}. $involvement.description$\\[.2cm]
+    {\large \textsc{$education.institution$}}\\[0.1cm]
+    $for(education.degree)$
+        \note{\rightline{$education.degree.years$}}$education.degree.subject$
+        $if(education.degree.details)$
+            \begin{itemize}
+            $for(education.degree.details)$
+                    \item{$education.degree.details.description$}
+            $endfor$
+            \end{itemize}
+        $endif$
+    $endfor$
 $endfor$
 
-\section*{Skills}
-$if(skills)$
-$for(skills)$
-  \emph{$skills.title$}: $skills.description$\\[.2cm]
+\heading{Work}
+$for(employer)$
+    {\large \textsc{$employer.name$}}\\
+    $for(employer.job)$
+        \note{\rightline{$employer.job.years$}}\emph{$employer.job.title$}
+        \begin{itemize}
+        $for(employer.job.details)$
+            \item{$employer.job.details.description$}
+        $endfor$
+        \end{itemize}
+    $endfor$
 $endfor$
-$endif$
+
+\heading{Technical}
+$for(skill)$
+    \textsc{$skill.title$:} $skill.description$\\[.2cm]
+$endfor$
+
+\heading{Additional}
+$for(additionalskill)$
+    \textsc{$additionalskill.title$:} $additionalskill.description$\\
+$endfor$
 
 \end{document}

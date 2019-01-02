@@ -1,12 +1,10 @@
 ---
-# Personal details
 name: Ethan Robison
 address:
 - 3414 Mudd Library
 - Evanston, IL 60201
 phone: "(312) 502 9032"
 email: ethanrobison@u.northwestern.edu
-# Insert URLs without http://
 urls:
 - ethanrobison.com
 
@@ -14,50 +12,62 @@ urls:
 
 intro: "Graduate student studying experimental game AI. Seeking software engineering intership."
 
+employer:
+    - name: SomaSim, LLC.
+      job:
+          - title: Gameplay and UI Programmer (Contractor)
+            years: 2016--2017
+            details:
+                - description: "Ported desktop UI to tablet-friendly version"
+                - description: "Pitched and developed novel gameplay elements"
+                - description: "Fixed bugs in existing gameplay"
+    - name: Northwestern University
+      job:
+          - years: Fall 2016--Present
+            title: Graduate Teaching Assistant
+            details:
+                - description: ""
+            description: "Lecturer and teaching assistant for course on fundamentals of data structures."
+          - years: Spring 2018
+            title: Instructor
+            details:
+                - description: ""
+            description: "Organizer, instructor of upper-level course for industry-bound students. Taught in Unity3D."
+
 experience:
-- years: Fall 2018
-  employer: Northwestern University
-  job: Graduate Teaching Assistant, Introduction to Artificial Intelligence
-  description: "Teaching assistant and team lead for upper-level course on artificial intelligence."
-- years: Spring 2018
-  employer: Northwestern University
-  job: Graduate Teaching Assistant, Data Structures and Data Management
-  description: "Lecturer and teaching assistant for course on fundamentals of data structures."
-- years: Spring 2018
-  employer: Northwestern University
-  job: Instructor, Game Design Studio II
-  description: "Organizer, instructor of upper-level course for industry-bound students. Taught in Unity3D."
-- years: 2016--2017
-  employer: SomaSim, LLC.
-  job: Unity3D Game Programmer (Contractor)
-  description: "UI programmer for mobile port of _Project Highrise_; programmer for desktop edition of same."
 
 involvement:
 - year: Summer 2018--Present
   title: CS PhD Advisory Council
   role: Board member
   description: "Organize events for graduate student community building."
-- year: Spring 2018--Present
-  title: Plant it Purple! Graduate Gardens
-  role: Volunteer
-  description: "Landscape and maintain vegetable gardens around university campus."
-
 
 education:
-- year: Expected 2020
-  subject: Ph. D. in Artifical Intelligence
-  institute: Northwestern University
+- institution: Northwestern University
   city: Evanston, IL
-- year: Graduated 2016
-  subject: B.S. in Computer Science
-  institute: Northwestern University
-  city: Evanston, IL
+  degree:
+      - subject: M.S. in Computer Science
+        years: 2016--2019 (expected)
+        gpa: "3.8"
+        details:
+            - description: "Extensive coursework in artificial intelligence"
+            - description: "Extensive teaching experience in game design, programming"
+      - subject: B.S. in Computer Science
+        years: 2012--2016
 
-skills:
+skill:
   - title: Programming
-    description: C#, Python, git, C, C++, JavaScript
-  - title: Foreign Language
-    description: "English, Spanish (fluent), French (conversational), Korean (conversational)"
+    description: C# (advanced), Python (advanced), C++ (intermediate), C (beginner)
+  - title: Software
+    description: Unity3D (advanced), git (intermediate), \LaTeX (intermediate)
+  - title: Technical Writing
+    description: Conference publications, Blogging
+
+additionalskill:
+  - title: Languages
+    description: "English, Spanish (fluent), French (elementary), Korean (elementary)"
+  - title: Interests
+    description: "Gardening, Yoga, Tabletop gaming."
 
 # Settings
 mainfont: Hoefler Text
