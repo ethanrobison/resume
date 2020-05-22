@@ -4,23 +4,23 @@
 \documentclass[$fontsize$, letter]{article}
 
 % LAYOUT
-%--------------------------------
-% Margins
 \usepackage{geometry} 
 \geometry{$geometry$}
-
-% Do not indent paragraphs
-\setlength\parindent{0in}
+\setlength\parindent{0cm}
+\pagenumbering{gobble}
 
 % Enable multicolumns
 \usepackage{multicol}
 \setlength{\columnsep}{-3.5cm}
 
-% Uncomment to suppress page numbers
-\pagenumbering{gobble}
+% Lists
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep}
+
+% Color
+\usepackage{xcolor}
 
 % LANGUAGE
-%--------------------------------
 % Set the main language
 $if(lang)$
 \usepackage{polyglossia}
@@ -28,7 +28,6 @@ $if(lang)$
 $endif$
 
 % TYPOGRAPHY
-%--------------------------------
 \usepackage{fontspec} 
 \usepackage{xunicode}
 \usepackage{xltxtra}
@@ -39,7 +38,6 @@ $endif$
 \newcommand{\amper}{{\fontspec[Scale=.95]{$mainfont$}\selectfont\itshape\&}}
 
 % MARGIN NOTES
-%--------------------------------
 \usepackage{marginnote}
 \newcommand{\note}[1]{\marginnote{\scriptsize #1}}
 \renewcommand*{\raggedleftmarginnote}{}
@@ -47,7 +45,6 @@ $endif$
 \reversemarginpar
 
 % HEADINGS
-%--------------------------------
 \usepackage{sectsty} 
 \usepackage[normalem]{ulem} 
 \sectionfont{\rmfamily\mdseries} 
@@ -55,17 +52,16 @@ $endif$
 \subsubsectionfont{\rmfamily\bfseries\upshape\normalsize} 
 
 % PDF SETUP
-%--------------------------------
 \usepackage{hyperref}
 \hypersetup
 {
-  pdfauthor={$name$},
-  pdfsubject={$name$ Resumé},
-  pdftitle={$name$'s Resumé},
-  colorlinks, breaklinks, xetex, bookmarks,
-  filecolor=black,
-  urlcolor=[rgb]{0,0,0},
-  linkcolor=[rgb]{0.117,0.682,0.858}
+    pdfauthor={$name$},
+    pdfsubject={$name$ Resumé},
+    pdftitle={$name$'s Resumé},
+    colorlinks, breaklinks, xetex, bookmarks,
+    filecolor=black,
+    urlcolor=[rgb]{0,0,0},
+    linkcolor=[rgb]{0.117,0.682,0.858}
 }
 
 \newcommand{\heading}[1]{
@@ -73,68 +69,62 @@ $endif$
 }
 
 % DOCUMENT
-%--------------------------------
 \begin{document}
 
-{\LARGE $name$}\\[.2cm]
+\begin{minipage}[t]{0.5\textwidth}
+    {\Huge $name$}\\[.2cm]
+\end{minipage}
+\hfill
+\begin{minipage}[b][2cm][b]{0.3\textwidth}
+    \begin{itemize}[label={}, align=right]
+        \item \hfill $email$
+        \item \hfill \href{https://$url$}{$url$}
+        \item \hfill $phone$
+        \item \hfill $address$
+    \end{itemize}
+\end{minipage}
 
-$if(urls)$
-    \begin{multicols}{2}
+\heading{Professional Summary}
+$if(intro)$
+    \textsc{$intro$}
 $endif$
 
-$for(address)$
-    $address$\\
+\heading{Development Experience}
+$for(work)$
+    {\large $work.title$}\\
+    {\color{gray}
+    $work.comp$
+    $if(work.extra)$ \big| $work.extra$ $endif$
+    \hspace*{\fill} $work.time$}
+    \\
+    $work.desc$\\
+    \vspace{-\baselineskip}
+    \begin{itemize}
+    $for(work.item)$
+        \item $work.item$
+    $endfor$
+    \end{itemize}
 $endfor$
-
-\vspace{-10pt}
-
-$phone$\\
-
-$if(urls)$
-    \columnbreak
-        $for(urls)$
-        \href{http://$urls$}{$urls$}\\
-        $endfor$
-    \href{mailto:$email$}{$email$}\\
-    \end{multicols}
-$endif$
+    
+\heading{Selected Projects}
+$for(project)$
+{\large $project.name$}\\
+$project.desc$ \big| $project.category$ \big| $project.tech$\\
+\\
+$endfor$
 
 \heading{Education}
 $for(education)$
-    {\large \textsc{$education.institution$}}\\[0.1cm]
-    $for(education.degree)$
-        \note{\rightline{$education.degree.years$}}$education.degree.subject$
-        $if(education.degree.details)$
-            \begin{itemize}
-            $for(education.degree.details)$
-                    \item{$education.degree.details.description$}
-            $endfor$
-            \end{itemize}
-        $endif$
-    $endfor$
-$endfor$
-
-\heading{Work}
-$for(employer)$
-    {\large \textsc{$employer.name$}}\\
-    $for(employer.job)$
-        \note{\rightline{$employer.job.years$}}\emph{$employer.job.title$}
-        \begin{itemize}
-        $for(employer.job.details)$
-            \item{$employer.job.details.description$}
-        $endfor$
-        \end{itemize}
+    $for(education)$
+        {\large $education.subject$}
+        \hspace*{\fill} $education.years$\\
+        $if(education.desc)$ $education.desc$\\ $endif$
     $endfor$
 $endfor$
 
 \heading{Technical}
 $for(skill)$
-    \textsc{$skill.title$:} $skill.description$\\[.2cm]
-$endfor$
-
-\heading{Additional}
-$for(additionalskill)$
-    \textsc{$additionalskill.title$:} $additionalskill.description$\\
+    {$skill.item$ ($skill.prof$)}
 $endfor$
 
 \end{document}

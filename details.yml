@@ -1,77 +1,108 @@
 ---
 name: Ethan Robison
-address:
-- 3414 Mudd Library
-- Evanston, IL 60201
+address: Chicago, IL
 phone: "(312) 502 9032"
-email: ethanrobison@u.northwestern.edu
-urls:
-- ethanrobison.com
+email: ethan@ethanrobison.com
+url: ethanrobison.com
 
-# Sections
+# Content
+intro:
+    "Twas brillig, and the slithy toves, did gyre and gimble in the wabe. All
+    mimsy, were the borogroves, and the mome raths outgrabe. Beware the
+    jabberwock, my son, with jaws that bite and claws that catch. Beware the
+    jubjub bird and shun, the frumious bandersnatch."
 
-intro: "Graduate student studying experimental game AI. Seeking software engineering intership."
-
-employer:
-    - name: SomaSim, LLC.
-      job:
-          - title: Gameplay and UI Programmer (Contractor)
-            years: 2016--2017
-            details:
-                - description: "Ported desktop UI to tablet-friendly version"
-                - description: "Pitched and developed novel gameplay elements"
-                - description: "Fixed bugs in existing gameplay"
-    - name: Northwestern University
-      job:
-          - years: Fall 2016--Present
-            title: Graduate Teaching Assistant
-            details:
-                - description: ""
-            description: "Lecturer and teaching assistant for course on fundamentals of data structures."
-          - years: Spring 2018
-            title: Instructor
-            details:
-                - description: ""
-            description: "Organizer, instructor of upper-level course for industry-bound students. Taught in Unity3D."
-
-experience:
-
-involvement:
-- year: Summer 2018--Present
-  title: CS PhD Advisory Council
-  role: Board member
-  description: "Organize events for graduate student community building."
+work:
+    - title: AI Programmer
+      comp: SomaSim, LLC.
+      time: Spring 19-Fall 19
+      extra: Intern
+      desc: "Architectued and implemented experimental AI gameplay."
+      item:
+          - Led studio in designing agent AI architecture for high-performance
+            strategy simulation.
+          - Enabled novel player experience by building 500-agent social
+            inference engine.
+    - title: UI Programmer
+      comp: SomaSim, LLC.
+      time: Summer 17
+      extra: Intern
+      desc: "Ported desktop mouse-only UI to multiple mobile devices."
+      item:
+          - Ported desktop interface to touch-only devices allowing greater
+            market access for a cross-platform product.
+          - Rearranged and rebuilt key UI features for use on low-power
+            devices.
+    - title: Gameplay Programmer
+      comp: SomaSim, LLC.
+      time: Fall 16-Spring 17
+      extra: Intern, Part-time
+      desc: "Supported and expanded shipped title with playerbase of over 100,000."
+      item:
+          - Developed features for high-performance simulation game.
+          - Investigated and implemented bugfixes on a fast-paced release cycle.
 
 education:
-- institution: Northwestern University
-  city: Evanston, IL
-  degree:
-      - subject: M.S. in Computer Science
-        years: 2016--2019 (expected)
-        gpa: "3.8"
-        details:
-            - description: "Extensive coursework in artificial intelligence"
-            - description: "Extensive teaching experience in game design, programming"
-      - subject: B.S. in Computer Science
-        years: 2012--2016
+- subject: MS Computer Science
+  years: Expected June 2020
+  desc: "Extensive coursework and teaching experience in practical and
+    experimental computer science subjects. Students taught ranged from
+    upper-level undergraduates to PhD and masters students."
+- subject: BS Computer Science
+  years: 2016
+
+project:
+    - name: Imaginarium
+      tech: C# and Unity3D
+      category: Open Source
+      desc: "Designed & built UI for casual constraint-based content generator"
+    - name: AutoCV
+      tech: Jekyll and Liquid Markdown
+      category: Individual
+      desc: "Built system for automatic curriculum vitae construction"
+    - name: Kernel Memory Allocator
+      tech: C
+      category: Course
+      desc: "Built kernel-level memory allocator for operating systems course"
+
+teach:
+    - name: "CS214: Data Structures"
+      desc: "Fundamentals of data structures, time complexity, & algorithms"
+    - name: "CS348: Introduction to Artificial Intelligence"
+      desc: "Classical and statistical AI theory and practice"
+    - name: "CS377: Game Design Studio"
+      desc: "Project course on design and development of video games"
 
 skill:
-  - title: Programming
-    description: C# (advanced), Python (advanced), C++ (intermediate), C (beginner)
-  - title: Software
-    description: Unity3D (advanced), git (intermediate), \LaTeX (intermediate)
-  - title: Technical Writing
-    description: Conference publications, Blogging
+    - item: C#
+      prof: expert
+    - item: Python
+      prof: advanced
+    - item: zsh
+      prof: proficient
+    - item: C
+      prof: proficient
+    - item: JavaScript
+      prof: prior experience
+    - item: git
+      prof: advanced
 
-additionalskill:
-  - title: Languages
-    description: "English, Spanish (fluent), French (elementary), Korean (elementary)"
-  - title: Interests
-    description: "Gardening, Yoga, Tabletop gaming."
+additionalskills:
+    - category: Foreign Language
+      entries:
+          - item: English (native speaker)
+          - item: Spanish (working fluency)
+          - item: French (familiar)
+    - category: Interests
+      entries:
+          - item: Yoga
+          - item: Gardening
+          - item: Tabletop Gaming
 
 # Settings
-mainfont: Hoefler Text
+mainfont: Helvetica
 fontsize: 10pt
 lang: en-US 
-geometry: a4paper, left=35mm, right=35mm, top=51mm, bottom=17mm
+geometry: letterpaper, left=25mm, right=25mm, top=25mm, bottom=25mm
+format: markdown
 ---
