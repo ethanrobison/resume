@@ -1,6 +1,5 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-
 \documentclass[$fontsize$, letter]{article}
 
 % LAYOUT
@@ -20,6 +19,7 @@
 % Color
 \usepackage{xcolor}
 
+
 % LANGUAGE
 % Set the main language
 $if(lang)$
@@ -34,8 +34,6 @@ $endif$
 % converts LaTeX specials (quotes, dashes etc.) to Unicode
 \defaultfontfeatures{Mapping=tex-text}
 \setromanfont [Ligatures={Common}, Numbers={OldStyle}]{$mainfont$}
-% Cool ampersand
-\newcommand{\amper}{{\fontspec[Scale=.95]{$mainfont$}\selectfont\itshape\&}}
 
 % MARGIN NOTES
 \usepackage{marginnote}
@@ -65,17 +63,17 @@ $endif$
 }
 
 \newcommand{\heading}[1]{
-    \hrulefill \vspace{-0.5cm} \subsection*{#1}
+    \hrulefill \vspace{-0.5cm} \subsection*{{\color{gray} #1}}
 }
 
 % DOCUMENT
 \begin{document}
 
-\begin{minipage}[t]{0.5\textwidth}
+\begin{minipage}[t]{0.4\textwidth}
     {\Huge $name$}\\[.2cm]
 \end{minipage}
 \hfill
-\begin{minipage}[b][2cm][b]{0.3\textwidth}
+\begin{minipage}[b][2cm][b]{0.4\textwidth}
     \begin{itemize}[label={}, align=right]
         \item \hfill $email$
         \item \hfill \href{https://$url$}{$url$}
@@ -106,23 +104,22 @@ $for(work)$
     \end{itemize}
 $endfor$
     
-\heading{Selected Projects}
-$for(project)$
-{\large $project.name$}\\
-$project.desc$ \big| $project.category$ \big| $project.tech$\\
-\\
+\heading{Selected Contributions}
+$for(proj)$
+{\large $proj.name$}\\
+{\color{gray} $proj.type$ $if(proj.extra)$ \big| $proj.extra$ $endif$} \\
+$proj.desc$ \vspace{\topsep} \\
 $endfor$
 
 \heading{Education}
 $for(education)$
-    $for(education)$
-        {\large $education.subject$}
-        \hspace*{\fill} $education.years$\\
-        $if(education.desc)$ $education.desc$\\ $endif$
-    $endfor$
+    $education.subject$, $education.institution$
+    \hspace*{\fill} {\color{gray} $education.years$}\\
+    $if(education.desc)$ $education.desc$\\ $endif$
+    \vspace{-\baselineskip}
 $endfor$
 
-\heading{Technical}
+\heading{Skills}
 $for(skill)$
     {$skill.item$ ($skill.prof$)}
 $endfor$

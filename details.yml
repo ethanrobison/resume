@@ -7,10 +7,7 @@ url: ethanrobison.com
 
 # Content
 intro:
-    "Twas brillig, and the slithy toves, did gyre and gimble in the wabe. All
-    mimsy, were the borogroves, and the mome raths outgrabe. Beware the
-    jabberwock, my son, with jaws that bite and claws that catch. Beware the
-    jubjub bird and shun, the frumious bandersnatch."
+    "Twas brillig, and the slithy toves, did gyre and gimble in the wabe."
 
 work:
     - title: AI Programmer
@@ -41,37 +38,37 @@ work:
       item:
           - Developed features for high-performance simulation game.
           - Investigated and implemented bugfixes on a fast-paced release cycle.
+    - name: Imaginarium
+      comp: Open Source Project
+      time: 2020
+      desc: "Designed & built UI for casual constraint-based content generator"
 
 education:
 - subject: MS Computer Science
+  institution: Northwestern University
   years: Expected June 2020
-  desc: "Extensive coursework and teaching experience in practical and
-    experimental computer science subjects. Students taught ranged from
-    upper-level undergraduates to PhD and masters students."
 - subject: BS Computer Science
+  institution: Northwestern University
   years: 2016
 
-project:
-    - name: Imaginarium
-      tech: C# and Unity3D
-      category: Open Source
-      desc: "Designed & built UI for casual constraint-based content generator"
-    - name: AutoCV
-      tech: Jekyll and Liquid Markdown
-      category: Individual
-      desc: "Built system for automatic curriculum vitae construction"
-    - name: Kernel Memory Allocator
-      tech: C
-      category: Course
-      desc: "Built kernel-level memory allocator for operating systems course"
-
-teach:
-    - name: "CS214: Data Structures"
-      desc: "Fundamentals of data structures, time complexity, & algorithms"
-    - name: "CS348: Introduction to Artificial Intelligence"
-      desc: "Classical and statistical AI theory and practice"
-    - name: "CS377: Game Design Studio"
-      desc: "Project course on design and development of video games"
+proj:
+      #- name: AutoCV
+      #extra: Jekyll and Liquid Markdown
+      #type: Individual
+      #desc: "Built system for automatic curriculum vitae construction"
+      #- name: Kernel Memory Allocator
+      #extra: C
+      #type: Course
+      #desc: "Built kernel-level memory allocator for operating systems course"
+      #- name: "Data Structures"
+      #type: Teaching
+      #desc: "Fundamentals of data structures, time complexity, & algorithms"
+      #- name: "Introduction to Artificial Intelligence"
+      #type: Teaching
+      #desc: "Classical and statistical AI theory and practice"
+      #- name: "Game Design Studio"
+      #type: Teaching
+      #desc: "Project course on design and development of video games"
 
 skill:
     - item: C#
@@ -84,24 +81,18 @@ skill:
       prof: proficient
     - item: JavaScript
       prof: prior experience
-    - item: git
-      prof: advanced
 
-additionalskills:
-    - category: Foreign Language
-      entries:
-          - item: English (native speaker)
-          - item: Spanish (working fluency)
-          - item: French (familiar)
-    - category: Interests
-      entries:
-          - item: Yoga
-          - item: Gardening
-          - item: Tabletop Gaming
+softskills:
+    - item: English
+      prof: native speaker
+    - item: Spanish
+      prof: fluent
+    - item: French
+      prof: familiar
 
 # Settings
 mainfont: Helvetica
-fontsize: 10pt
+fontsize: 11pt
 lang: en-US 
 geometry: letterpaper, left=25mm, right=25mm, top=25mm, bottom=25mm
 format: markdown
