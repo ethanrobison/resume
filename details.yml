@@ -12,9 +12,10 @@ intro:
 work:
     - title: AI Programmer
       comp: SomaSim, LLC.
-      time: Spring 19-Fall 19
-      extra: Intern
-      desc: "Architectued and implemented experimental AI gameplay."
+      time: Spring 19--Fall 19
+      extra: Internship
+      desc: "Architected AI systems for upcoming high-performance strategy
+        simulation game."
       item:
           - Led studio in designing agent AI architecture for high-performance
             strategy simulation.
@@ -23,25 +24,21 @@ work:
     - title: UI Programmer
       comp: SomaSim, LLC.
       time: Summer 17
-      extra: Intern
-      desc: "Ported desktop mouse-only UI to multiple mobile devices."
+      extra: Internship
+      desc: "Ported desktop mouse-only UI of simulation game Project Highrise
+        to multiple mobile devices."
       item:
-          - Ported desktop interface to touch-only devices allowing greater
-            market access for a cross-platform product.
-          - Rearranged and rebuilt key UI features for use on low-power
-            devices.
+          - Ported desktop interface to touch devices for greater
+            cross-platform market access.
+          - Redesigned key UI features for use on low-power devices.
     - title: Gameplay Programmer
       comp: SomaSim, LLC.
-      time: Fall 16-Spring 17
-      extra: Intern, Part-time
-      desc: "Supported and expanded shipped title with playerbase of over 100,000."
+      time: Fall 16--Spring 17
+      extra: Internship, Part-time
+      desc: "Supported and expanded simulation game Project Highrise with
+         playerbase of over 100,000."
       item:
-          - Developed features for high-performance simulation game.
           - Investigated and implemented bugfixes on a fast-paced release cycle.
-    - name: Imaginarium
-      comp: Open Source Project
-      time: 2020
-      desc: "Designed & built UI for casual constraint-based content generator"
 
 education:
 - subject: MS Computer Science
@@ -52,17 +49,24 @@ education:
   years: 2016
 
 proj:
-      #- name: AutoCV
-      #extra: Jekyll and Liquid Markdown
-      #type: Individual
-      #desc: "Built system for automatic curriculum vitae construction"
+    - title: Imaginarium
+      comp: Open Source Project
+      time: Fall 20--Ongoing
+      desc: "Designed and built UI for Imaginarium, a casual constraint-based
+        content generator"
+    - title: AutoCV
+      comp: Individual Project
+      time: Winter 20--Ongoing
+      desc: "Built system for automatic curriculum vitae construction"
       #- name: Kernel Memory Allocator
       #extra: C
       #type: Course
       #desc: "Built kernel-level memory allocator for operating systems course"
-      #- name: "Data Structures"
-      #type: Teaching
-      #desc: "Fundamentals of data structures, time complexity, & algorithms"
+    - title: "Data Structures"
+      comp: Northwestern University
+      extra: Teaching
+      time: Spring 18 & Spring 20
+      desc: "Fundamentals of data structures, time complexity, & algorithms"
       #- name: "Introduction to Artificial Intelligence"
       #type: Teaching
       #desc: "Classical and statistical AI theory and practice"
@@ -72,19 +76,19 @@ proj:
 
 skill:
     - item: C#
-      prof: expert
+    - item: Unity3D
     - item: Python
-      prof: advanced
+    - item: git
     - item: zsh
-      prof: proficient
     - item: C
-      prof: proficient
     - item: JavaScript
-      prof: prior experience
 
-softskills:
+soft:
+    - item: Teaching
+    - item: Leadership
+    - item: Public Speaking
     - item: English
-      prof: native speaker
+      prof: native
     - item: Spanish
       prof: fluent
     - item: French

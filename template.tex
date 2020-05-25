@@ -13,12 +13,16 @@
 \setlength{\columnsep}{-3.5cm}
 
 % Lists
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \setlist[itemize]{noitemsep}
+\newlist{commalist}{description*}{4}
+\setlist[commalist]{itemjoin={{,}},afterlabel=\unskip{{~}},mode=unboxed}
 
 % Color
 \usepackage{xcolor}
 
+% Margins
+\usepackage{changepage}
 
 % LANGUAGE
 % Set the main language
@@ -83,38 +87,60 @@ $endif$
 \end{minipage}
 
 \heading{Professional Summary}
-$if(intro)$
-    \textsc{$intro$}
-$endif$
+\begin{adjustwidth}{28pt}{0pt}
+$intro$
+\end{adjustwidth}
 
 \heading{Development Experience}
 $for(work)$
-    {\large $work.title$}\\
-    {\color{gray}
+    {\Large $work.title$}
+    {\small \color{gray}
     $work.comp$
-    $if(work.extra)$ \big| $work.extra$ $endif$
-    \hspace*{\fill} $work.time$}
+    $if(work.extra)$ \big| $work.extra$ $endif$ \hspace*{\fill} $work.time$}
     \\
-    $work.desc$\\
-    \vspace{-\baselineskip}
+    $work.desc$
     \begin{itemize}
     $for(work.item)$
         \item $work.item$
     $endfor$
     \end{itemize}
 $endfor$
+
+\heading{Selected Experience}
+$for(proj)$
+    {\Large $proj.title$}
+    {\small \color{gray}
+    $proj.comp$
+    $if(proj.extra)$ \big| $proj.extra$ $endif$ \hspace*{\fill} $proj.time$}
+    \begin{adjustwidth}{0pt}{0pt}
+    $proj.desc$\\
+    \end{adjustwidth}
+
+$endfor$
     
 \heading{Education}
 $for(education)$
-    $education.subject$, $education.institution$
-    \hspace*{\fill} {\color{gray} $education.years$}\\
+    $education.subject$
+    {\small {\color{gray}
+    $education.institution$
+    \hspace*{\fill} $education.years$}}\\
     $if(education.desc)$ $education.desc$\\ $endif$
     \vspace{-\baselineskip}
 $endfor$
 
 \heading{Skills}
+{\color{gray} Technical}
+\begin{commalist}
 $for(skill)$
-    {$skill.item$ ($skill.prof$)}
+    \item $skill.item$ $if(skill.prof)$ ($skill.prof$) $endif$
 $endfor$
+\end{commalist}
+
+{\color{gray} Soft}
+\begin{commalist}
+$for(soft)$
+    \item $soft.item$ $if(soft.prof)$ {\color{gray}($soft.prof$)} $endif$
+$endfor$
+\end{commalist}
 
 \end{document}
