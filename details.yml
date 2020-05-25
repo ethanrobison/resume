@@ -12,7 +12,7 @@ intro:
 work:
     - title: AI Programmer
       comp: SomaSim, LLC.
-      time: Spring 19--Fall 19
+      time: Spring--Fall 19
       extra: Internship
       desc: "Architected AI systems for upcoming high-performance strategy
         simulation game."
@@ -25,8 +25,8 @@ work:
       comp: SomaSim, LLC.
       time: Summer 17
       extra: Internship
-      desc: "Ported desktop mouse-only UI of simulation game Project Highrise
-        to multiple mobile devices."
+      desc: "Ported desktop UI of simulation game Project Highrise to multiple
+        mobile devices."
       item:
           - Ported desktop interface to touch devices for greater
             cross-platform market access.
@@ -57,7 +57,7 @@ proj:
     - title: AutoCV
       comp: Individual Project
       time: Winter 20--Ongoing
-      desc: "Built system for automatic curriculum vitae construction"
+      desc: "Built system for automatic curriculum vitae construction."
       #- name: Kernel Memory Allocator
       #extra: C
       #type: Course
@@ -65,8 +65,8 @@ proj:
     - title: "Data Structures"
       comp: Northwestern University
       extra: Teaching
-      time: Spring 18 & Spring 20
-      desc: "Fundamentals of data structures, time complexity, & algorithms"
+      time: Spring 18 and Spring 20
+      desc: "Taught course on data structures, time complexity, and algorithms."
       #- name: "Introduction to Artificial Intelligence"
       #type: Teaching
       #desc: "Classical and statistical AI theory and practice"
