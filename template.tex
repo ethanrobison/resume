@@ -86,19 +86,45 @@ $endif$
     \end{itemize}
 \end{minipage}
 
-\heading{Professional Summary}
-\begin{adjustwidth}{28pt}{0pt}
-$intro$
-\end{adjustwidth}
+
+\begin{minipage}[t]{0.3\textwidth} % Left side
+
+\heading{Key Skills}
+$for(skill)$
+$skill.item$ $if(skill.prof)$ {\color{gray}($skill.prof$)} $endif$\\
+$endfor$
+
+\heading{Soft Skills}
+$for(soft)$
+$soft.item$ $if(soft.prof)$ {\color{gray}($soft.prof$)} $endif$\\
+$endfor$
+
+\heading{Teaching}
+$for(teach)$
+$teach.item$\\
+$endfor$
+
+\heading{Education}
+$for(education)$
+    $education.subject$\\
+    {\small {\color{gray}
+    $education.institution$\\
+    $education.years$}}\\
+    \\
+$endfor$
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.65\textwidth} % Right side
 
 \heading{Development Experience}
 $for(work)$
-    {\Large $work.title$}
+    {\Large $work.title$}\\
     {\small \color{gray}
     $work.comp$
-    $if(work.extra)$ \big| $work.extra$ $endif$ \hspace*{\fill} $work.time$}
-    \\
+    $if(work.extra)$ \big| $work.extra$ $endif$ \hspace*{\fill} $work.time$}\\
     $work.desc$
+    \vspace{-\topsep}
     \begin{itemize}
     $for(work.item)$
         \item $work.item$
@@ -106,41 +132,22 @@ $for(work)$
     \end{itemize}
 $endfor$
 
-\heading{Selected Experience}
+\heading{Selected Projects}
 $for(proj)$
-    {\Large $proj.title$}
+    {\Large $proj.title$}\\
     {\small \color{gray}
     $proj.comp$
-    $if(proj.extra)$ \big| $proj.extra$ $endif$ \hspace*{\fill} $proj.time$}
-    \begin{adjustwidth}{0pt}{0pt}
-    $proj.desc$\\
-    \end{adjustwidth}
+    $if(proj.extra)$ \big| $proj.extra$ $endif$ \hspace*{\fill} $proj.time$}\\
+    $proj.desc$
+    \vspace{-\topsep}
+    \begin{itemize}
+    $for(proj.item)$
+        \item $proj.item$
+    $endfor$
+    \end{itemize}
 
 $endfor$
+
+\end{minipage}
     
-\heading{Education}
-$for(education)$
-    $education.subject$
-    {\small {\color{gray}
-    $education.institution$
-    \hspace*{\fill} $education.years$}}\\
-    $if(education.desc)$ $education.desc$\\ $endif$
-    \vspace{-\baselineskip}
-$endfor$
-
-\heading{Skills}
-{\color{gray} Technical}
-\begin{commalist}
-$for(skill)$
-    \item $skill.item$ $if(skill.prof)$ ($skill.prof$) $endif$
-$endfor$
-\end{commalist}
-
-{\color{gray} Soft}
-\begin{commalist}
-$for(soft)$
-    \item $soft.item$ $if(soft.prof)$ {\color{gray}($soft.prof$)} $endif$
-$endfor$
-\end{commalist}
-
 \end{document}

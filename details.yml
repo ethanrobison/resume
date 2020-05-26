@@ -7,26 +7,24 @@ url: ethanrobison.com
 
 # Content
 intro:
-    "Twas brillig, and the slithy toves, did gyre and gimble in the wabe."
+    "Recent graduate seeking gameplay programming position."
 
 work:
     - title: AI Programmer
       comp: SomaSim, LLC.
       time: Spring--Fall 19
       extra: Internship
-      desc: "Architected AI systems for upcoming high-performance strategy
-        simulation game."
+      desc: "Architected AI systems for high-performance simulation game."
       item:
-          - Led studio in designing agent AI architecture for high-performance
-            strategy simulation.
+          - Co-designed and developed agent AI architecture for
+            high-performance strategy simulation.
           - Enabled novel player experience by building 500-agent social
             inference engine.
     - title: UI Programmer
       comp: SomaSim, LLC.
       time: Summer 17
       extra: Internship
-      desc: "Ported desktop UI of simulation game Project Highrise to multiple
-        mobile devices."
+      desc: "Ported simulation game Project Highrise to mobile devices."
       item:
           - Ported desktop interface to touch devices for greater
             cross-platform market access.
@@ -35,10 +33,9 @@ work:
       comp: SomaSim, LLC.
       time: Fall 16--Spring 17
       extra: Internship, Part-time
-      desc: "Supported and expanded simulation game Project Highrise with
-         playerbase of over 100,000."
+      desc: "Supported simulation game with playerbase of 100,000+."
       item:
-          - Investigated and implemented bugfixes on a fast-paced release cycle.
+          - Implemented bugfixes on a fast-paced release cycle.
 
 education:
 - subject: MS Computer Science
@@ -52,36 +49,53 @@ proj:
     - title: Imaginarium
       comp: Open Source Project
       time: Fall 20--Ongoing
-      desc: "Designed and built UI for Imaginarium, a casual constraint-based
-        content generator"
+      desc: "Built UI for Imaginarium, a casual content generator."
+      item:
+          - Leveraged experimental AI to afford non-expert users
+            constraint-based procedural content generation.
     - title: AutoCV
       comp: Individual Project
       time: Winter 20--Ongoing
       desc: "Built system for automatic curriculum vitae construction."
+      item:
+          - Used metadata and a templating system to reduce overhead in
+            documenting personal and professional work.
       #- name: Kernel Memory Allocator
       #extra: C
       #type: Course
       #desc: "Built kernel-level memory allocator for operating systems course"
-    - title: "Data Structures"
-      comp: Northwestern University
-      extra: Teaching
-      time: Spring 18 and Spring 20
-      desc: "Taught course on data structures, time complexity, and algorithms."
+      #- title: "Data Structures"
+      #comp: Northwestern University
+      #extra: Teaching
+      #time: Spring 18 and 20
+      #desc: "Taught course on data structures, time complexity, and algorithms."
       #- name: "Introduction to Artificial Intelligence"
       #type: Teaching
       #desc: "Classical and statistical AI theory and practice"
-      #- name: "Game Design Studio"
-      #type: Teaching
-      #desc: "Project course on design and development of video games"
+    - title: "Game Design Studio"
+      comp: Northwestern University
+      extra: Teaching
+      time: Winters 17,18,19, and 20
+      desc: "Taught course on practical video game development."
+      item:
+          - Guided graduate and undergraduate students in designing and
+            developing their own game projects.
 
 skill:
     - item: C#
+      prof: expert
     - item: Unity3D
+      prof: advanced
     - item: Python
+      prof: advanced
     - item: git
+      prof: advanced
     - item: zsh
+      prof: proficient
     - item: C
+      prof: proficient
     - item: JavaScript
+      prof: prior experience
 
 soft:
     - item: Teaching
@@ -93,6 +107,13 @@ soft:
       prof: fluent
     - item: French
       prof: familiar
+
+teach:
+    - item: Data Structures
+    - item: Intro to Artificial Intelligence
+    - item: Game Design Studio
+    - item: Game Development
+    - item: Game Design
 
 # Settings
 mainfont: Helvetica
