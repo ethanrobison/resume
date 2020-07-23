@@ -12,8 +12,7 @@ intro:
 work:
     - title: AI Programmer
       comp: SomaSim, LLC.
-      time: Spring--Fall 19
-      extra: Internship
+      time: Spring 19--Present
       desc: "Architected AI systems for high-performance simulation game."
       item:
           - Co-designed and developed agent AI architecture for
