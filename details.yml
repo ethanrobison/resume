@@ -27,7 +27,8 @@ work:
       item:
           - Ported desktop interface to touch devices for greater
             cross-platform market access.
-          - Redesigned key UI features for use on low-power devices.
+          - Redesigned key UI features for use on memory- and 
+            CPU-limited devices.
     - title: Gameplay Programmer
       comp: SomaSim, LLC.
       time: Fall 16--Spring 17
@@ -83,18 +84,18 @@ proj:
 skill:
     - item: C#
       prof: expert
-    - item: Unity3D
-      prof: advanced
+    - item: C++
+      prof: proficient
+    - item: C
+      prof: proficient
     - item: Python
+      prof: advanced
+    - item: Unity3D
       prof: advanced
     - item: git
       prof: advanced
     - item: zsh
       prof: proficient
-    - item: C
-      prof: proficient
-    - item: JavaScript
-      prof: prior experience
 
 soft:
     - item: Teaching
@@ -110,8 +111,8 @@ soft:
 teach:
     - item: Data Structures
     - item: Intro to Artificial Intelligence
-    - item: Game Design Studio
-    - item: Game Development
+    - item: Game Engine Fundamentals
+    - item: Game Programming
     - item: Game Design
 
 # Settings
