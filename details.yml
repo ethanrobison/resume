@@ -40,7 +40,7 @@ work:
 education:
 - subject: MS Computer Science
   institution: Northwestern University
-  years: Expected June 2020
+  years: 2020
 - subject: BS Computer Science
   institution: Northwestern University
   years: 2016
@@ -48,18 +48,32 @@ education:
 proj:
     - title: Imaginarium
       comp: Open Source Project
-      time: Fall 20--Ongoing
+      time: Fall 19--Ongoing
       desc: "Built UI for Imaginarium, a casual content generator."
       item:
           - Leveraged experimental AI to afford non-expert users
             constraint-based procedural content generation.
-    - title: AutoCV
+            #    - title: AutoCV
+            #      comp: Individual Project
+            #      time: Winter 20--Ongoing
+            #      desc: "Built system for automatic curriculum vitae construction."
+            #      item:
+            #          - Used metadata and a templating system to reduce overhead in
+            #            documenting personal and professional work.
+    - title: Jump N Shoot Man
       comp: Individual Project
-      time: Winter 20--Ongoing
-      desc: "Built system for automatic curriculum vitae construction."
+      time: Winter 20
+      desc: "Built didactic demo for platformer gameplay in C++."
       item:
-          - Used metadata and a templating system to reduce overhead in
-            documenting personal and professional work.
+          - Constructed a demonstration of common input, camera, and
+            gameplay techniques used in 2D platformer games.
+    - title: Procedural Archaeology
+      comp: Individual Project
+      time: Spring 19
+      desc: "Leveraged language models for creative content generation."
+      item:
+          - Implemented flexible language models in C++ to generate large
+            volumes of novel content.
       #- name: Kernel Memory Allocator
       #extra: C
       #type: Course
@@ -72,14 +86,14 @@ proj:
       #- name: "Introduction to Artificial Intelligence"
       #type: Teaching
       #desc: "Classical and statistical AI theory and practice"
-    - title: "Game Design Studio"
-      comp: Northwestern University
-      extra: Teaching
-      time: Winters 17,18,19, and 20
-      desc: "Taught course on practical video game development."
-      item:
-          - Guided graduate and undergraduate students in designing and
-            developing their own game projects.
+      #    - title: "Game Design Studio"
+      #      comp: Northwestern University
+      #      extra: Teaching
+      #      time: Winters 17,18,19, and 20
+      #      desc: "Taught course on practical video game development."
+      #      item:
+      #          - Guided graduate and undergraduate students in designing and
+      #            developing their own game projects.
 
 skill:
     - item: C#
